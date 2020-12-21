@@ -225,11 +225,12 @@ body {
   padding: 10px 0;
   margin-top: 50px;
   font-size: 12px;
+  color: #999;
 }
 
 .footer a {
   text-decoration: none;
-  color: #000;
+  color: #999;
 }
   
 .footer a:hover {
