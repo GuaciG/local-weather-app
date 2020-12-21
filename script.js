@@ -93,7 +93,7 @@ function getWeather(lat, lon) {
   //Make a request to the XMLHttpRequest object
   var weather = new XMLHttpRequest();
   //Here requestURL is web server's url where we request data. 
-  var requestURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + "ea2effbdebc8975b8ae2baeb57d63317";
+  var requestURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + "ea2effbdebc8975b8ae2baeb57d63317";
   //In the onreadystatechange property of the XMLHttpRequest obj we define the function to be executed when the request receives an answer. 
   weather.onreadystatechange = function() {
     //readyState 	holds the status of the XMLHttpRequest and 4 means: request finished and response is ready
@@ -120,7 +120,7 @@ function printWeather(obj) {
   
   //Print Icon
   var descriptionIcon = document.getElementById("descriptionIcon");
-  descriptionIcon.setAttribute("src", "http://openweathermap.org/img/w/" + obj.weather[0].icon + ".png");
+  descriptionIcon.setAttribute("src", "https://openweathermap.org/img/w/" + obj.weather[0].icon + ".png");
   
   
   //Print Description
