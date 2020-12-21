@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+.heading-container,
+.container-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#container,
+.main-info,
+.temperature-info,
+.more-info,
+.thermal-sensation,
+.footer,
+.searcher-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  background-image: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#error {
+  display: none;
+  position: fixed;
+  width: 80vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  text-transform: initial;
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.heading-container {
+  background-color: rgba(61, 76, 211, 0.4);
+  border-radius: 8px 8px 0 0;
+  width: 50%;
+  color: #333;
+  padding: 10px 0 0 0;
+}
+
+.heading-container h1 {
+  font-size: 1.7em;
+}
+
+.today {
+  font-size: 1.375em;
+  margin-top: 10px;
+}
+
+#date {
+  margin-top: 5px;
+  font-size: 0.875em;
+}
+  
+#container {
+  color: #000;
+  width: 50%;
+  padding-top: 20px;
+  background-color: rgba(61, 76, 211, 0.4);
+  border-radius: 0 0 8px 8px;
+}
+
+.container-top {
+  background-color: rgba(155, 155, 155, 0.4);
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0 8px;
+  padding: 10px 20px 20px 20px;
+}
+
+.pin i {
+  font-size: 1.5em;
+  color: orange;
+}
+
+.location-info h2 {
+  margin: 5px 0;
+  font-size: 1.8em;
+}
+
+.description-info h3{
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.temperature-info h2 {
+  font-size: 1.8em;
+}
+
+.temperature-info i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.weather-icon {
+  width: 85px;
+  height: 85px;
+}
+
+.more-info {
+  margin: 20px 0 0 0;
+}
+
+.thermal-sensation {
+  margin-right: 20px;
+}
+
+.thermal-sensation p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.feel-info h4 {
+  margin-left: 10px;
+}
+
+.buttons div {
+  float: left;
+  clear: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  background-color: orange;
+  padding: 5px 15px;
+  cursor: pointer;
+  width: 50%;
+  box-shadow: 0 0 15px 6px rgba(37, 37, 37, 0.3);
+}
+
+.buttons div:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.buttons div:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.unselect {
+  opacity: 0.5;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px 20px 20px;
+  background-color: rgba(10, 10, 10, 0.4);
+  border-radius: 0 0 8px 0;
+}
+
+.data-wind {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 5px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 6px rgba(37, 37, 37, 0.3);
+  width: 100%;
+}
+
+.wind-card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 5px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 6px rgba(37, 37, 37, 0.3);
+  width: 100%;
+}
+
+.wind-info h2, .card-info h2 {
+  font-size: 1em;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+  font-size: 12px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+}
+  
+.footer a:hover {
+	color: orange;
+}
+
+@media screen and (max-width: 868px) {
+
+  #container, .heading-container {
+    width: 85%;
+  }
+
+  #container, .data {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .container-top {
+    border-radius: 0;
+  }
+
+  .data {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .card-info {
+    width: 100%; 
+    margin: 5px 0;
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 325px) {
+
+  .main-info {
+    flex-direction: column-reverse;
+  }
+
+  .more-info {
+    flex-direction: column;
+  }
+
+  .thermal-sensation {
+    margin: 0 0 10px 0;
+  }
+  
+}

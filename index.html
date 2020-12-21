@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/2e918371a2.js"></script> 
+</head>
+<body>
+    <div id="error">
+        <p>Please check your location settings in your mobile or browser. Otherwise, a browser update could be necessary.</p>
+    </div>
+    <div class="heading-container">
+        <h1 class="heading">Local Weather App</h1>
+        <p id="day" class="today">-</p>
+        <p id="date">-</p>
+    </div>
+    <div id="container">
+        <section class="container-top">
+            <span class="pin"><i class="fas fa-map-marker-alt"></i></span>
+            <div id="location" class="location-info">
+                <h2>-</h2>
+            </div>
+            <div id="description" class="description-info">
+                <h3>-</h3>
+            </div>
+            <div class="main-info">
+                <div id="temperature" class="temperature-info">
+                    <i class="fas fa-temperature-low"></i>
+                    <h2>-</h2>
+                </div>
+                <div id="icon">
+                    <img id="descriptionIcon" alt="Weather Icon" class="weather-icon">
+                </div>
+            </div>
+            <div class="more-info">
+                <div class="thermal-sensation">
+                    <div>
+                        <p>*Feel like</p>
+                    </div>
+                    <div id="feelLike" class="feel-info">
+                        <h4>-</h4>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div id="C">°C</div>
+                    <div id="F" class="unselect">°F</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="data">
+            <div class="data-wind">
+                <div class="wind-card-info">
+                    <div class="data-info">    
+                        <h5><i class="fas fa-wind"></i> Wind Speed</h5>
+                    </div>
+                    <div id="windSpeed" class="wind-info">
+                        <h2>-</h2>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div id="kmph">kmph</div>
+                    <div id="mph" class="unselect">mph</div>
+                </div>
+            </div>
+            <div class="card-info">    
+                <div class="data-info">
+                    <h5><i class="fas fa-tint"></i> Humidity</h5>
+                </div>
+                <div id="humidity" class="humidity-info">
+                    <h2>-</h2>
+                </div>    
+            </div>
+            <div class="card-info">    
+                <div class="data-info">
+                    <h5><i class="fas fa-tachometer-alt"></i> Pressure</h5>
+                </div>
+                <div id="pressure" class="pressure-info">
+                    <h2>-</h2>
+                </div>    
+            </div>
+        </section>   
+    </div>
+    <div class="footer">
+        <p>&copy; 2020 Guaci Gutiérrez &bull; <a href="https://guacig.github.io/" target="_blank">Portfolio</a></p>
+    </div>
+</body>
+</html>
